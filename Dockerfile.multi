@@ -1,5 +1,5 @@
 FROM node:9.3.0-slim as builder
-COPY package.json ./
+COPY package.json package.json
 RUN npm config set registry http://registry.npmjs.org
 ## Storing node modules on a separate layer will prevent unnecessary npm installs at each build
 
